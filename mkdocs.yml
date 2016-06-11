@@ -1,0 +1,35 @@
+site_name: Documentation
+site_url: http://giv-oct.uni-muenster.de:8080/docs
+site_description: Project documentation about the Core of the Open-City-Toolkit
+site_author: Nicholas Schiestel, Jonas Wissing, Auriol Degbelo
+# site_favicon: img/favicon.ico
+# Local
+#site_dir: site
+# Server
+site_dir: /home/webteam/OCT-Core/public/docs
+
+repo_url: https://github.com/geo-c/OCT-Core-Docs
+
+pages:
+- Home: index.md
+- Architecture:
+    - Overview: architecture/overview.md
+#    - Database-Schema: architecture/database-schema.md
+    - REST-API: architecture/rest-api.md
+- Database-Schemas:
+    - 1. Apps: schemas/1_apps.md
+    - 2. Logs: schemas/2_logs.md
+- About:
+    - Repositories: about/repositories.md
+    - Contributors: about/contributors.md
+# - NewSection
+    #- newPage: newSection/newPage.md
+# - newSinlePage: newSinlePage.md
+
+theme: readthedocs
+
+markdown_extensions:
+    - toc:
+        permalink: true
+
+copyright: Copyright &copy; 2016 <a href="https://www.uni-muenster.de/Geoinformatics/">Institute for Geoinformatics, Münster</a>
