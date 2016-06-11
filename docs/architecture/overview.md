@@ -1,1 +1,1 @@
-![architecture](../img/architecture.png)
+![architecture](../img/architecture.svg)
