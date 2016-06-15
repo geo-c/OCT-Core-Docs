@@ -29,6 +29,7 @@
 |------|----------|--------|---------|-------|
 | <span class="green">201</span> | `/api/login` | **POST** | PA |
 | <span class="blue">501</span> | `/api/reset` | **POST** | PA |
+| <span class="green">200</span> | `/api/query` | **GET** | UT, AT |
 | <span class="green">200</span> | `/api/apps` | **GET** | AT, AO |
 | <span class="blue">501</span> | `/api/apps` | **POST** | AT, AO |
 | <span class="blue">501</span> | `/api/apps` | **DELETE** all | AT, AO |
