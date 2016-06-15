@@ -27,4 +27,17 @@
 
 | Code | Endpoint | Method | Headers | Query |
 |------|----------|--------|---------|-------|
-| <span class="green">200</span> | `/api/login` | **POST** | PA |
+| <span class="green">201</span> | `/api/login` | **POST** | PA |
+| <span class="blue">501</span> | `/api/reset` | **POST** | PA |
+| <span class="green">200</span> | `/api/apps` | **GET** | AT, AO |
+| <span class="blue">501</span> | `/api/apps` | **POST** | AT, AO |
+| <span class="blue">501</span> | `/api/apps` | **DELETE** all | AT, AO |
+| <span class="blue">501</span> | `/api/apps/:app_name` | **GET** | AT, AO |
+| <span class="blue">501</span> | `/api/apps/:app_name` | **PUT** | AT, AO |
+| <span class="blue">501</span> | `/api/apps/:app_name` | **DELETE** | AT, AO |
+| <span class="green">200</span> | `/api/apps/:app_name/logs` | **GET** | AT, AO |
+| <span class="green">501</span> | `/api/apps/:app_name/logs` | **POST** | AT, AO |
+| <span class="green">501</span> | `/api/apps/:app_name/logs` | **DELETE** (all) | AT, AO |
+| <span class="green">501</span> | `/api/apps/:app_name/logs/:log_id` | **GET** | AT, AO |
+| <span class="green">501</span> | `/api/apps/:app_name/logs/:log_id` | **PUT** | AT, AO |
+| <span class="green">501</span> | `/api/apps/:app_name/logs/:log_id` | **DELETE** | AT, AO |
