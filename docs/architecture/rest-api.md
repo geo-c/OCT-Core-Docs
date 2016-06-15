@@ -37,8 +37,8 @@
 | <span class="blue">501</span> | `/api/apps/:app_name` | **PUT** | AT, AO |
 | <span class="blue">501</span> | `/api/apps/:app_name` | **DELETE** | AT, AO |
 | <span class="green">200</span> | `/api/apps/:app_name/logs` | **GET** | AT, AO |
-| <span class="green">501</span> | `/api/apps/:app_name/logs` | **POST** | AT, AO |
-| <span class="green">501</span> | `/api/apps/:app_name/logs` | **DELETE** (all) | AT, AO |
-| <span class="green">501</span> | `/api/apps/:app_name/logs/:log_id` | **GET** | AT, AO |
-| <span class="green">501</span> | `/api/apps/:app_name/logs/:log_id` | **PUT** | AT, AO |
-| <span class="green">501</span> | `/api/apps/:app_name/logs/:log_id` | **DELETE** | AT, AO |
+| <span class="blue">501</span> | `/api/apps/:app_name/logs` | **POST** | AT, AO |
+| <span class="blue">501</span> | `/api/apps/:app_name/logs` | **DELETE** (all) | AT, AO |
+| <span class="blue">501</span> | `/api/apps/:app_name/logs/:log_id` | **GET** | AT, AO |
+| <span class="blue">501</span> | `/api/apps/:app_name/logs/:log_id` | **PUT** | AT, AO |
+| <span class="blue">501</span> | `/api/apps/:app_name/logs/:log_id` | **DELETE** | AT, AO |
