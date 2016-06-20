@@ -8,7 +8,7 @@ CREATE TABLE Apps (
 
     -- General
     created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE,
+    updated TIMESTAMP WITH TIME ZONE NOT NULL,
 
     -- Attributes
 	app_name CHARACTER VARYING(255) NOT NULL UNIQUE,
