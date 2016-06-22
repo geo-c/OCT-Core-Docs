@@ -14,17 +14,17 @@ pages:
 - Home: index.md
 - Architecture:
     - Overview: architecture/overview.md
-#    - Database-Schema: architecture/database-schema.md
+    - Database-Schema: architecture/database-schema.md
     - REST-API: architecture/rest-api.md
 - Database-Schemas:
     - 1. Apps: schemas/1_apps.md
     - 2. Logs: schemas/2_logs.md
-    - 3. Users: schemas/3_users.md
-    - 4. Datasources: schemas/4_datasources.md
-    - 5. Prefixes: schemas/5_prefixes.md
-    - 6. Metadata: schemas/6_metadata.md
-    - 7. Tags: schemas/7_tags.md
-    - 8. Datasets: schemas/8_datasets.md
+    - 3. Admins: schemas/3_admins.md
+    - 4. Datastores: schemas/4_datastores.md
+    - 5. Endpoints: schemas/5_endpoints.md
+    - 6. Main-Datasets: schemas/6_main_datasets.md
+    - 7. Sub-Datasets: schemas/7_sub_datasets.md
+    - 8. Tags: schemas/8_tags.md
     - 9. Queries: schemas/9_queries.md
 - About:
     - Repositories: about/repositories.md
