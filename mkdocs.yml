@@ -25,7 +25,7 @@ pages:
     - 6. Metadata: schemas/6_metadata.md
     - 7. Tags: schemas/7_tags.md
     - 8. Datasets: schemas/8_datasets.md
-#    - 9. Queries: schemas/9_queries.md
+    - 9. Queries: schemas/9_queries.md
 - About:
     - Repositories: about/repositories.md
     - Contributors: about/contributors.md
