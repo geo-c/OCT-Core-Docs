@@ -26,5 +26,5 @@ INSERT INTO Metadata (created, updated, metadata_name, metadata_description, end
 VALUES (now(), now(), 'EnviroCar', 'The EnviroCar Project', 1, 'Ifgi', '2013-01-01', 'MIT');
 
 INSERT INTO Metadata (created, updated, metadata_name, metadata_description, endpoint, publisher, published_on, license)
-VALUES (now(), now(), 'Water levels', 'Water levels of the river \"Werse\"', 2, 'Ifgi', '2016-07-20', 'MIT');
+VALUES (now(), now(), 'Water gauges', 'Water levels of the river \"Werse\"', 2, 'Ifgi', '2016-07-20', 'MIT');
 ```

@@ -35,8 +35,8 @@ INSERT INTO Tags (created, updated, metadata_id, tag_name)
 VALUES (now(), now(), 2, 'Sensors');
 
 INSERT INTO Tags (created, updated, metadata_id, tag_name)
-VALUES (now(), now(), 3, 'Measurements');
+VALUES (now(), now(), 2, 'Measurements');
 
 INSERT INTO Tags (created, updated, metadata_id, tag_name)
-VALUES (now(), now(), 4, 'Water gauges');
+VALUES (now(), now(), 2, 'Water gauges');
 ```
