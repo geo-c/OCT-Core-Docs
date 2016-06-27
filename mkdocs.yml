@@ -22,10 +22,13 @@ pages:
     - 3. Admins: schemas/3_admins.md
     - 4. Datastores: schemas/4_datastores.md
     - 5. Endpoints: schemas/5_endpoints.md
-    - 6. Main-Datasets: schemas/6_main_datasets.md
-    - 7. Sub-Datasets: schemas/7_sub_datasets.md
-    - 8. Tags: schemas/8_tags.md
-    - 9. Queries: schemas/9_queries.md
+    - 6. Categories: schemas/6_categories.md
+    - 7. Main-Datasets: schemas/7_main_datasets.md
+    - 8. Categories-Relationships: schemas/8_categories_relationships.md
+    - 9. Sub-Datasets: schemas/9_sub_datasets.md
+    - 10. Tags: schemas/10_tags.md
+    - 11. Queries: schemas/11_queries.md
+#    - 12. Parameters: schemas/12_parameters.md
 - About:
     - Repositories: about/repositories.md
     - Contributors: about/contributors.md
