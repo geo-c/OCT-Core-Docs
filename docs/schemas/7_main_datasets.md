@@ -13,25 +13,25 @@ CREATE TABLE Main_Datasets (
     -- Attributes
     ds_id INTEGER NOT NULL REFERENCES Datastores (ds_id) ON UPDATE CASCADE ON DELETE CASCADE,
     endpoint_id INTEGER NOT NULL REFERENCES Endpoints (endpoint_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    created_by INTEGER NOT NULL REFERENCES Admins (username) ON UPDATE CASCADE ON DELETE CASCADE,
+    created_by CHARACTER VARYING(255) NOT NULL REFERENCES Admins (username) ON UPDATE CASCADE ON DELETE CASCADE,
     md_name CHARACTER VARYING(255) NOT NULL,
     md_description CHARACTER VARYING(255) NOT NULL,
     publisher CHARACTER VARYING(255) NOT NULL,
-    published TIMESTAMP WITH TIME ZONE NOT NULL,
+    published CHARACTER VARYING(255) NOT NULL,
     license CHARACTER VARYING(255)
 );
 
 
 -- EXAMPLE-DATA
 INSERT INTO Main_Datasets (created, updated, ds_id, endpoint_id, created_by, md_name, md_description, publisher, published, license)
-VALUES (now(), now(), 1 , 1 , 1 , 'n_schi16' , 'Water gauges' , 'Datasets about a mobile water gauge sensor network' , 'Nicholas Schiestel' , 'July 2016' , 'MIT');
+VALUES (now(), now(), 1, 1, 'n_schi16', 'Water gauges', 'Datasets about a mobile water gauge sensor network', 'Nicholas Schiestel', 'July 2016', 'MIT');
 
 INSERT INTO Main_Datasets (created, updated, ds_id, endpoint_id, created_by, md_name, md_description, publisher, published, license)
-VALUES (now(), now(), 2 , 1 , 1 , 'n_schi16' , 'Plants' , 'Dataset about plants' , 'Nicholas Schiestel' , 'June 2016' , 'MIT');
+VALUES (now(), now(), 1, 1, 'n_schi16', 'Plants', 'Dataset about plants', 'Nicholas Schiestel', 'June 2016', 'MIT');
 
 INSERT INTO Main_Datasets (created, updated, ds_id, endpoint_id, created_by, md_name, md_description, publisher, published, license)
-VALUES (now(), now(), 3 , 8 , 2 , 'n_schi16' , 'EnviroCar' , 'The EnviroCar Project' , 'Institute for Geoinformatics' , '2013-01-01' , 'MIT');
+VALUES (now(), now(), 8, 2, 'n_schi16', 'EnviroCar', 'The EnviroCar Project', 'Institute for Geoinformatics', '2013-01-01', 'MIT');
 
 INSERT INTO Main_Datasets (created, updated, ds_id, endpoint_id, created_by, md_name, md_description, publisher, published, license)
-VALUES (now(), now(), 4 , 8 , 3 , 't_user01' , 'EnviroCar' , 'The EnviroCar Project' , 'Institute for Geoinformatics' , '2013-01-01' , 'MIT');
+VALUES (now(), now(), 8, 3, 'test', 'EnviroCar', 'The EnviroCar Project', 'Institute for Geoinformatics', '2013-01-01', 'MIT');
 ```
