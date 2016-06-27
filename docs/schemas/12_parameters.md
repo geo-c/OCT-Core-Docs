@@ -11,7 +11,7 @@ CREATE TABLE Parameters (
     updated TIMESTAMP WITH TIME ZONE NOT NULL,
 
     -- Attributes
-    query_id INTEGER REFERENCES Queries (query_id) ON UPDATE CASCADE ON DELETE CASCADE
+    query_id INTEGER REFERENCES Queries (query_id) ON UPDATE CASCADE ON DELETE CASCADE,
     parameter_value CHARACTER VARYING(255)
 );
 
