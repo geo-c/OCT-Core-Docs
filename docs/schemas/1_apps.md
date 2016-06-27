@@ -22,5 +22,5 @@ CREATE TABLE Apps (
 
 -- EXAMPLE-DATA
 INSERT INTO Apps (created, updated, app_name, app_hash, app_description, email_address, first_name, last_name)
-VALUES (now(), now(), '1st_app', '', 'abc.123456789.xyz', 'sitcomlab245@gmail.com', 'OCT', 'Admin');
+VALUES (now(), now(), 'test', 'abc123def456ghj789klm', 'test app', 'max@mustermann.com', 'Max', 'Mustermann');
 ```
