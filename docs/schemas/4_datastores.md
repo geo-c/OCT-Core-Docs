@@ -11,7 +11,7 @@ CREATE TYPE types AS ENUM (
     'COUCHDB',
     'PARLIAMENT',
     'CKAN',
-    'VIRTUOSO'
+    'VIRTUOSU'
 );
 
 
@@ -24,9 +24,9 @@ CREATE TABLE Datastores (
     updated TIMESTAMP WITH TIME ZONE NOT NULL,
 
     -- Attributes
-    ds_description CHARACTER VARYING(255) NOT NULL,
-    ds_host CHARACTER VARYING(255) NOT NULL,
-    ds_port INTEGER NOT NULL,
+    ds_description CHARACTER VARYING(255),
+    ds_host CHARACTER VARYING(255),
+    ds_port INTEGER,
     db_instance CHARACTER VARYING(255),
     db_user CHARACTER VARYING(255),
     db_password CHARACTER VARYING(255),
