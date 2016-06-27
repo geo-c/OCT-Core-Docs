@@ -161,4 +161,4 @@ The following figure shows the database-schema:
 
 | parameter_id | query_id | parameter_value |
 |--------------|----------|-----------------|
-| 1 | 5 | '1' |
+| 1 | 5 | 1 |
