@@ -28,7 +28,7 @@ pages:
     - 9. Sub-Datasets: schemas/9_sub_datasets.md
     - 10. Tags: schemas/10_tags.md
     - 11. Queries: schemas/11_queries.md
-#    - 12. Parameters: schemas/12_parameters.md
+    - 12. Parameters: schemas/12_parameters.md
 - About:
     - Repositories: about/repositories.md
     - Contributors: about/contributors.md
