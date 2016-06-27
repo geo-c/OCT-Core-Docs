@@ -55,7 +55,7 @@ The following figure shows the database-schema:
 | 5 | PARLIAMENT | local Parliament-Server | 127.0.0.1 | 6000 | | | |
 | 6 | CKAN | local CKAN-Datastore | 127.0.0.1 | 5000 | | | |
 | 7 | VIRTUOSU | local Virtuosu-Server | 127.0.0.1 | 4000 | | | |
-| 8 | REST | | | | |
+| 8 | REST | | | | | |
 
 
 ### 5. Endpoints
@@ -148,17 +148,17 @@ The following figure shows the database-schema:
 
 ### 11. Queries
 
-| query_id | sd_id | tag_name | tag_language |
-|----------|-------|----------|--------------|
-| 1 |  |
-| 2 | |
-| 3 | |
-| 4 | |
-| 5 | |
-| 6 | |
-| 7 | |
+| query_id | sd_id | query_intern | query_extern | query_description |
+|----------|-------|--------------|--------------|-------------------|
+| 1 | 1 | SELECT * FROM Sensors; | | List all Sensors |
+| 2 | 1 | SELECT * FROM Sensors sensors JOIN Shapes water_bodies ON sensors.water_body_id=water_bodies.water_body_id; | List all Sensors with their related Water Body |
+| 3 | 2 | SELECT * FROM Shapes; | | List all Water Bodies |
+| 4 | 3 | SELECT * FROM Measurements; | | List all Water Gauges (Measurements) |
+| 5 | 3 | SELECT * FROM Measurements WHERE sensor_id=$1; |  | List all Water Gauges (Measurements) of a Sensor by its sensor_id |
 
 
 ### 12. Parameters
 
-To-Do
+| parameter_id | query_id | parameter_value |
+|--------------|----------|-----------------|
+| 1 | 5 | '1' |
