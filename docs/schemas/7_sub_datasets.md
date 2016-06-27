@@ -1,9 +1,9 @@
 ```sql
-DROP TABLE IF EXISTS Datasets CASCADE;
+DROP TABLE IF EXISTS Sub_Datasets CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Datasets (
+CREATE TABLE Sub_Datasets (
 
     -- General
 	dataset_id SERIAL PRIMARY KEY,
@@ -20,33 +20,33 @@ CREATE TABLE Datasets (
 -- EXAMPLE-DATA
 
 -- EnviroCar API
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 1, 'Tracks', 'The Tracks endpoint');
 
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 1, 'Phenomenons', 'The Phenomenons endpoint');
 
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 1, 'Sensors', 'The Sensors endpoint');
 
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 1, 'Groups', 'The Groups endpoint');
 
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 1, 'Users', 'The Users endpoint');
 
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 1, 'Measurements', 'The Measurements endpoint');
 
 
 -- OCT API (Connectors & Queries)
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 2, 'Sensors', 'The Measurements table');
 
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 2, 'Water Bodies', 'The Water Bodies table');
 
-INSERT INTO Datasets (created, updated, metadata_id, dataset_name, dataset_description)
+INSERT INTO Sub_Datasets (created, updated, metadata_id, dataset_name, dataset_description)
 VALUES (now(), now(), 2, 'Water gauges', 'The Measurements table');
 
 ```

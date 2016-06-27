@@ -1,9 +1,9 @@
 ```sql
-DROP TABLE IF EXISTS Metadata CASCADE;
+DROP TABLE IF EXISTS Main_Datasets CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Metadata (
+CREATE TABLE Main_Datasets (
 
     -- General
     metadata_id SERIAL PRIMARY KEY,

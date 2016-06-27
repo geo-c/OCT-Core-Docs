@@ -1,5 +1,5 @@
 ```sql
-DROP TABLE IF EXISTS Datasources CASCADE;
+DROP TABLE IF EXISTS Datastores CASCADE;
 DROP TYPE IF EXISTS categories CASCADE;
 
 -- ENUM
@@ -16,7 +16,7 @@ CREATE TYPE categories AS ENUM (
 
 
 -- SCHEMA
-CREATE TABLE Datasources (
+CREATE TABLE Datastores (
 
     -- General
     datasource_id SERIAL PRIMARY KEY,

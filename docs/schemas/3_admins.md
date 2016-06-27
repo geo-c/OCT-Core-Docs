@@ -1,5 +1,5 @@
 ```sql
-DROP TABLE IF EXISTS Users CASCADE;
+DROP TABLE IF EXISTS Admins CASCADE;
 DROP TYPE IF EXISTS roles CASCADE;
 
 -- ENUM
@@ -9,7 +9,7 @@ CREATE TYPE roles AS ENUM (
 );
 
 -- SCHEMA
-CREATE TABLE Users (
+CREATE TABLE Admins (
 
     -- General
     username CHARACTER VARYING(255) NOT NULL UNIQUE,
@@ -28,10 +28,10 @@ CREATE TABLE Users (
 
 
 -- EXAMPLE-DATA
-INSERT INTO Users (created, updated, username, role, email_address, first_name, last_name, expires_on)
+INSERT INTO Admins (created, updated, username, role, email_address, first_name, last_name, expires_on)
 VALUES (now(), now(), 'n_schi16', 'ADMIN', 'n.schiestel@uni-muenster.de', 'Nicho', 'S.', NULL);
 
-INSERT INTO Users (created, updated, username, role, email_address, first_name, last_name, expires_on)
+INSERT INTO Admins (created, updated, username, role, email_address, first_name, last_name, expires_on)
 VALUES (now(), now(), 'test', 'GUEST', 'test_user@example.org', 'Test', 'User', '2017-01-30');
 
 ```
