@@ -19,8 +19,11 @@ CREATE TABLE Endpoints (
 
 -- EXAMPLE-DATA
 INSERT INTO Endpoints (created, updated, endpoint_host, endpoint_port, endpoint_path)
-VALUES (now(), now(), 'http://giv-oct.uni-muenster.de', 80, '/api'),
+VALUES (now(), now(), 'http://giv-oct.uni-muenster.de', 80, '/api');
 
 INSERT INTO Endpoints (created, updated, endpoint_host, endpoint_port, endpoint_path)
-VALUES (now(), now(), 'http://envirocar.org', 80, '/api/stable/'),
+VALUES (now(), now(), 'http://envirocar.org', 80, '/api/stable/');
+
+INSERT INTO Endpoints (created, updated, endpoint_host, endpoint_port, endpoint_path)
+VALUES (now(), now(), 'http://envirocar.org', 80, '/api/dev/');
 ```
