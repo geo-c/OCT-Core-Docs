@@ -32,6 +32,5 @@ INSERT INTO Admins (created, updated, username, role, email_address, first_name,
 VALUES (now(), now(), 'n_schi16', 'ADMIN', 'n.schiestel@uni-muenster.de', 'Nicho', 'S.', NULL);
 
 INSERT INTO Admins (created, updated, username, role, email_address, first_name, last_name, expires_on)
-VALUES (now(), now(), 'test', 'GUEST', 'test_user@example.org', 'Test', 'User', '2017-01-30');
-
+VALUES (now(), now(), 'test', 'GUEST', 'testuser@example.org', 'Test', 'User', '2017-01-01');
 ```
