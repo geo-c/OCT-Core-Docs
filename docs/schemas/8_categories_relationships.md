@@ -16,27 +16,27 @@ CREATE TABLE Categories_Relationships (
 
 
 -- EXAMPLE-DATA
-INSERT INTO Metadata (created, updated, md_id, category_id)
+INSERT INTO Categories_Relationships (created, updated, md_id, category_id)
 VALUES (now(), now(), 1, 6);
 
-INSERT INTO Metadata (created, updated, md_id, category_id)
+INSERT INTO Categories_Relationships (created, updated, md_id, category_id)
 VALUES (now(), now(), 1, 11);
 
-INSERT INTO Metadata (created, updated, md_id, category_id)
+INSERT INTO Categories_Relationships (created, updated, md_id, category_id)
 VALUES (now(), now(), 1, 12);
 
-INSERT INTO Metadata (created, updated, md_id, category_id)
+INSERT INTO Categories_Relationships (created, updated, md_id, category_id)
 VALUES (now(), now(), 2, 11);
 
-INSERT INTO Metadata (created, updated, md_id, category_id)
+INSERT INTO Categories_Relationships (created, updated, md_id, category_id)
 VALUES (now(), now(), 3, 11);
 
-INSERT INTO Metadata (created, updated, md_id, category_id)
+INSERT INTO Categories_Relationships (created, updated, md_id, category_id)
 VALUES (now(), now(), 3, 12);
 
-INSERT INTO Metadata (created, updated, md_id, category_id)
+INSERT INTO Categories_Relationships (created, updated, md_id, category_id)
 VALUES (now(), now(), 4, 11);
 
-INSERT INTO Metadata (created, updated, md_id, category_id)
+INSERT INTO Categories_Relationships (created, updated, md_id, category_id)
 VALUES (now(), now(), 4, 12);
 ```
