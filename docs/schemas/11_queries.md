@@ -11,37 +11,26 @@ CREATE TABLE Queries (
     updated TIMESTAMP WITH TIME ZONE NOT NULL,
 
     -- Attributes
-    dataset_id INTEGER REFERENCES Dataset (dataset_id) ON UPDATE CASCADE ON DELETE CASCADE
-    query_method CHARACTER VARYING(255),
+    sd_id INTEGER REFERENCES Dataset (dataset_id) ON UPDATE CASCADE ON DELETE CASCADE
     query_intern CHARACTER VARYING(255) NOT NULL,
+    query_extern CHARACTER VARYING(255) NOT NULL,
     query_description CHARACTER VARYING(255) NOT NULL,
 );
 
 -- EXAMPLE-DATA
+INSERT INTO Queries (created, updated, sd_id, query_intern, query_extern, query_description)
+VALUES (now(), now(), 1, 'SELECT * FROM Sensors;', '', 'List all Sensors');
 
--- EnviroCar API
-INSERT INTO Datasets (created, updated, dataset_id, query_method, query_intern, query_description)
-VALUES (now(), now(), 1, 'GET', '/tracks', 'List all Tracks');
+INSERT INTO Queries (created, updated, sd_id, query_intern, query_extern, query_description)
+VALUES (now(), now(), 1, 'SELECT * FROM Sensors sensors JOIN Shapes water_bodies ON sensors.water_body_id=water_bodies.water_body_id;', '', 'List all Sensors with their related Water Body');
 
-INSERT INTO Datasets (created, updated, dataset_id, query_method, query_intern, query_description)
-VALUES (now(), now(), 2, 'GET', '/phenomenons', 'List all Phenomenons');
+INSERT INTO Queries (created, updated, sd_id, query_intern, query_extern, query_description)
+VALUES (now(), now(), 2, 'SELECT * FROM Shapes;', '', 'List all Water Bodies');
 
--- OCT API
-INSERT INTO Datasets (created, updated, dataset_id, query_method, query_intern, query_description)
-VALUES (now(), now(), 7, '', 'SELECT * FROM Sensors ;', 'List all Sensors');
+INSERT INTO Queries (created, updated, sd_id, query_intern, query_extern, query_description)
+VALUES (now(), now(), 2, 'SELECT * FROM Measurements;', '', 'List all Water Gauges (Measurements)');
 
-INSERT INTO Datasets (created, updated, dataset_id, query_method, query_intern, query_description)
-VALUES (now(), now(), 7, '', 'SELECT * FROM Sensors sensors JOIN Water_Bodies water_bodies ON sensors.water_body_id=water_bodies.water_body_id;', 'List all Sensors with related Water Body');
+INSERT INTO Queries (created, updated, sd_id, query_intern, query_extern, query_description)
+VALUES (now(), now(), 2, 'SELECT * FROM Measurements WHERE sensor_id=$1;', '', 'List all Water Gauges (Measurements) of a Sensor by its sensor_id');
 
-INSERT INTO Datasets (created, updated, dataset_id, query_method, query_intern, query_description)
-VALUES (now(), now(), 8, '', 'SELECT * FROM Water_Bodies ORDER BY name;', 'List all Water Bodies, sort by name');
-
-INSERT INTO Datasets (created, updated, dataset_id, query_method, query_intern, query_description)
-VALUES (now(), now(), 9, '', 'SELECT * FROM Measurements;', 'List all Measurements');
-
-INSERT INTO Datasets (created, updated, dataset_id, query_method, query_intern, query_description)
-VALUES (now(), now(), 9, '', 'SELECT * FROM Measurements WHERE measurement_id=1;', 'Retrieve a Measurement by its Id, example: measurement_id=1');
-
-INSERT INTO Datasets (created, updated, dataset_id, query_method, query_intern, query_description)
-VALUES (now(), now(), 9, '', 'SELECT * FROM Measurements WHERE measurement_id=1;', 'Retrieve a Measurement by its Id, example: measurement_id=1');
 ```
