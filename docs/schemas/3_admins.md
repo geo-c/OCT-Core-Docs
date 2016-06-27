@@ -20,7 +20,7 @@ CREATE TABLE Admins (
     email_address CHARACTER VARYING(255) NOT NULL,
     first_name CHARACTER VARYING(255) NOT NULL,
     last_name CHARACTER VARYING(255) NOT NULL,
-    expires_on TIMESTAMP WITH TIME ZONE
+    expires_on TIMESTAMP WITH TIME ZONE,
 
     -- Role
     role roles NOT NULL
