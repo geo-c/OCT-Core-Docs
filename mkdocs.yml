@@ -17,6 +17,7 @@ pages:
     - Database-Schema: architecture/database-schema.md
     - REST-API: architecture/rest-api.md
 - Database-Schemas:
+    - Resetting: schemas/0_reset.md
     - 1. Apps: schemas/1_apps.md
     - 2. Logs: schemas/2_logs.md
     - 3. Admins: schemas/3_admins.md
