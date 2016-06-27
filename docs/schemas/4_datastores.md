@@ -1,9 +1,9 @@
 ```sql
 DROP TABLE IF EXISTS Datastores CASCADE;
-DROP TYPE IF EXISTS categories CASCADE;
+DROP TYPE IF EXISTS types CASCADE;
 
 -- ENUM
-CREATE TYPE categories AS ENUM (
+CREATE TYPE types AS ENUM (
     'REST',
     'POSTGRESQL',
     'MYSQL',
@@ -19,42 +19,45 @@ CREATE TYPE categories AS ENUM (
 CREATE TABLE Datastores (
 
     -- General
-    datasource_id SERIAL PRIMARY KEY,
+    ds_id SERIAL PRIMARY KEY,
     created TIMESTAMP WITH TIME ZONE NOT NULL,
     updated TIMESTAMP WITH TIME ZONE NOT NULL,
 
     -- Attributes
-    host CHARACTER VARYING(255) NOT NULL,
-    port_number INTEGER NOT NULL,
-    datasource_description CHARACTER VARYING(255) NOT NULL,
+    ds_description CHARACTER VARYING(255) NOT NULL,
+    ds_host CHARACTER VARYING(255) NOT NULL,
+    ds_port INTEGER NOT NULL,
     db_instance CHARACTER VARYING(255),
     db_user CHARACTER VARYING(255),
     db_password CHARACTER VARYING(255),
 
-    -- Category
-    category categories NOT NULL
+    -- Type
+    ds_type types NOT NULL
 );
 
 
 -- EXAMPLE-DATA
-INSERT INTO Datasources (created, updated, category, host, port_number, datasource_description, db_instance, db_user, db_password)
-VALUES (now(), now(), 'REST', 'http://envirocar.org', 80, 'The EnviroCar API', '', '', '');
+INSERT INTO Datastores (created, updated, ds_type, ds_description, ds_host, ds_port, db_instance, db_user, db_password)
+VALUES (now(), now(), 'POSTGRESQL', 'local PostgreSQL-Database with installed PostGIS-Extension', '127.0.0.1', 5432, 'oct_db', 'oct', 'oct');
 
-INSERT INTO Datasources (created, updated, category, host, port_number, datasource_description, db_instance, db_user, db_password)
-VALUES (now(), now(), 'POSTGRESQL', '127.0.0.1', 5432, 'OCT-PostgreSQL', 'oct_data', 'oct', 'oct');
+INSERT INTO Datastores (created, updated, ds_type, ds_description, ds_host, ds_port, db_instance, db_user, db_password)
+VALUES (now(), now(), 'POSTGRESQL', 'extern PostgreSQL-Database', 'http://giv-lodumdata.uni-muenster.de', 5432, 'oct_db_2', 'oct', 'oct');
 
-INSERT INTO Datasources (created, updated, category, host, port_number, datasource_description, db_instance, db_user, db_password)
-VALUES (now(), now(), 'MONGODB', '127.0.0.1', 27010, 'OCT-MongoDB', '', '', '');
+INSERT INTO Datastores (created, updated, ds_type, ds_description, ds_host, ds_port, db_instance, db_user, db_password)
+VALUES (now(), now(), 'MONGODB', 'local MongoDB', '127.0.0.1', 27010, '', '', '');
 
-INSERT INTO Datasources (created, updated, category, host, port_number, datasource_description, db_instance, db_user, db_password)
-VALUES (now(), now(), 'COUCHDB', '127.0.0.1', 8000, 'OCT-CouchDB', '', '', '');
+INSERT INTO Datastores (created, updated, ds_type, ds_description, ds_host, ds_port, db_instance, db_user, db_password)
+VALUES (now(), now(), 'COUCHDB', 'local CouchDB', '127.0.0.1', 8000, '', '', '');
 
-INSERT INTO Datasources (created, updated, category, host, port_number, datasource_description, db_instance, db_user, db_password)
-VALUES (now(), now(), 'CKAN', '127.0.0.1', 5000, 'OCT-CKAN', '', '', '');
+INSERT INTO Datastores (created, updated, ds_type, ds_description, ds_host, ds_port, db_instance, db_user, db_password)
+VALUES (now(), now(), 'PARLIAMENT', 'local Parliament-Server', '127.0.0.1', 6000, '', '', '');
 
-INSERT INTO Datasources (created, updated, category, host, port_number, datasource_description, db_instance, db_user, db_password)
-VALUES (now(), now(), 'PARLIAMENT', '127.0.0.1', 4000, 'OCT-Parliament', '', '', '');
+INSERT INTO Datastores (created, updated, ds_type, ds_description, ds_host, ds_port, db_instance, db_user, db_password)
+VALUES (now(), now(), 'CKAN', 'local CKAN-Datastore', '127.0.0.1', 5000, '', '', '');
 
-INSERT INTO Datasources (created, updated, category, host, port_number, datasource_description, db_instance, db_user, db_password)
-VALUES (now(), now(), 'VIRTUOSO', '127.0.0.1', 3000, 'OCT-Virtuoso', '', '', '');
+INSERT INTO Datastores (created, updated, ds_type, ds_description, ds_host, ds_port, db_instance, db_user, db_password)
+VALUES (now(), now(), 'VIRTUOSU', 'local Virtuosu-Server', '127.0.0.1', 4000, '', '', '');
+
+INSERT INTO Datastores (created, updated, ds_type, ds_description, ds_host, ds_port, db_instance, db_user, db_password)
+VALUES (now(), now(), 'REST', NULL, NULL, NULL, NULL, NULL, NULL);
 ```
