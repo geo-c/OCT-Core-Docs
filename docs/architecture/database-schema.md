@@ -48,13 +48,13 @@ The following figure shows the database-schema:
 
 | ds_id | ds_type | ds_description | ds_host | ds_port | ds_instance | ds_user | ds_password |
 |-------|---------|----------------|---------|---------|-------------|---------|-------------|
-| 1 | POSTGRESQL | local PostgreSQL-Database with installed PostGIS-Extension | 127.0.0.1 | 5432 | oct | oct |
-| 2 | POSTGRESQL | extern PostgreSQL-Database | http://giv-lodumdata.uni-muenster.de | 5432 | oct | oct |
+| 1 | POSTGRESQL | local PostgreSQL-Database with installed PostGIS-Extension | 127.0.0.1 | 5432 | oct_db | oct | oct |
+| 2 | POSTGRESQL | extern PostgreSQL-Database | http://giv-lodumdata.uni-muenster.de | 5432 | oct_db_2 | oct | oct |
 | 3 | MONGODB | local MongoDB | 127.0.0.1 | 27010 | | | |
 | 4 | COUCHDB | local CouchDB | 127.0.0.1 | 8000 | | | |
-| 5 | PARLIAMENT | local MongoDB | 127.0.0.1 | 6000 | | | |
-| 6 | CKAN | local MongoDB | 127.0.0.1 | 5000 | | | |
-| 7 | VIRTUOSU | local MongoDB | 127.0.0.1 | 4000 | | | |
+| 5 | PARLIAMENT | local Parliament-Server | 127.0.0.1 | 6000 | | | |
+| 6 | CKAN | local CKAN-Datastore | 127.0.0.1 | 5000 | | | |
+| 7 | VIRTUOSU | local Virtuosu-Server | 127.0.0.1 | 4000 | | | |
 | 8 | REST | | | | |
 
 
