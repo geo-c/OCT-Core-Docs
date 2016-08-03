@@ -27,21 +27,21 @@ The following figure shows the database-schema:
 
 ### 2. Logs
 
-| log_id | app_hash | timestamp |
-|--------|----------|-----------|
-| 1 | abc123def456ghj789klm | 2016-06-20T07:25:32.112Z |
-| 2 | abc123def456ghj789klm | 2016-06-23T12:43:01.212Z |
-| 3 | abc123def456ghj789klm | 2016-06-23T12:44:10.002Z |
-| 4 | abc123def456ghj789klm | 2016-06-23T12:45:32.090Z |
-| 5 | abc123def456ghj789klm | 2016-06-24T15:12:45.321Z |
+| log_id | app_hash | timestamp |category_id |
+|--------|----------|-----------|-----------|
+| 1 | abc123def456ghj789klm | 2016-06-20T07:25:32.112Z | 1 |
+| 2 | abc123def456ghj789klm | 2016-06-23T12:43:01.212Z | 1 |
+| 3 | abc123def456ghj789klm | 2016-06-23T12:44:10.002Z | 1 |
+| 4 | abc123def456ghj789klm | 2016-06-23T12:45:32.090Z | 2 |
+| 5 | abc123def456ghj789klm | 2016-06-24T15:12:45.321Z | 2 |
 
 
 ### 3. Admins
 
-| username | email_address | first_name | last_name | role | expires_on |
-|----------|---------------|------------|-----------|------|------------|
-| n_schi16 | admin@example.org | Nicho | S. | ADMIN | NULL |
-| t_user01 | testuser@example.org | Test | User | GUEST | 2017-01-01T00:00:00.000Z |
+| username | password | email_address | first_name | last_name | role | expires_on |
+|----------|---------------|---------------|------------|-----------|------|------------|
+| n_schi16 | abc123 | admin@example.org | Nicho | S. | ADMIN | NULL |
+| t_user01 | xyz789 | testuser@example.org | Test | User | GUEST | 2017-01-01T00:00:00.000Z |
 
 
 ### 4. Datastores
@@ -68,7 +68,7 @@ The following figure shows the database-schema:
 
 
 ### 6. Categories
-| catgegory_id | catgegory_name |
+| category_id | category_name |
 |--------------|----------------|
 | 1 | Population |
 | 2 | Education and Science |
@@ -98,7 +98,7 @@ The following figure shows the database-schema:
 
 ### 8. Category_relationships
 
-| md_id | catgegory_id |
+| md_id | category_id |
 |-------|--------------|
 | 1 | 6 |
 | 1 | 11 |

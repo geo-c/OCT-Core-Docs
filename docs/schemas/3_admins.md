@@ -17,6 +17,7 @@ CREATE TABLE Admins (
     updated TIMESTAMP WITH TIME ZONE NOT NULL,
 
     -- Attributes
+    password CHARACTER VARYING(255) NOT NULL,
     email_address CHARACTER VARYING(255) NOT NULL,
     first_name CHARACTER VARYING(255) NOT NULL,
     last_name CHARACTER VARYING(255) NOT NULL,
@@ -28,9 +29,9 @@ CREATE TABLE Admins (
 
 
 -- EXAMPLE-DATA
-INSERT INTO Admins (created, updated, username, role, email_address, first_name, last_name, expires_on)
-VALUES (now(), now(), 'n_schi16', 'ADMIN', 'n.schiestel@uni-muenster.de', 'Nicho', 'S.', NULL);
+INSERT INTO Admins (created, updated, username, role, password, email_address, first_name, last_name, expires_on)
+VALUES (now(), now(), 'n_schi16', 'ADMIN', 'abc123', 'n.schiestel@uni-muenster.de', 'Nicho', 'S.', NULL);
 
-INSERT INTO Admins (created, updated, username, role, email_address, first_name, last_name, expires_on)
-VALUES (now(), now(), 'test', 'GUEST', 'testuser@example.org', 'Test', 'User', '2017-01-01');
+INSERT INTO Admins (created, updated, username, role, password, email_address, first_name, last_name, expires_on)
+VALUES (now(), now(), 'test', 'GUEST', 'xyz789' 'testuser@example.org', 'Test', 'User', '2017-01-01');
 ```
