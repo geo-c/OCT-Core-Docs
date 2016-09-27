@@ -9,7 +9,7 @@
 
 [http://giv-oct.uni-muenster.de:8081/](http://giv-oct.uni-muenster.de:8081/)
 
-![alt text](http://giv-oct.uni-muenster.de:8080/docs/tutorial/1_AppKey/1_AppKeyFigures/mainPageApps.png "Main Page Apps")
+![alt text](https://github.com/geo-c/OCT-Core-Docs/blob/master/docs/tutorial/1_AppKeyFigures/GetAPIKeyForm1.png "Main Page Apps")
 
 
 2. Select *Get an API Key*. An empty from will open.  
