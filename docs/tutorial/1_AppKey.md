@@ -9,21 +9,21 @@
 
 [http://giv-oct.uni-muenster.de:8081/](http://giv-oct.uni-muenster.de:8081/)
 
-![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKeyFigures/GetAPIKeyForm1.png)
+![alt text](https://github.com/geo-c/OCT-Core-Docs/blob/master/docs/tutorial/1_AppKeyFigures/GetAPIKeyForm1.png "Main Page Apps")
 
 
 2. Select *Get an API Key*. An empty from will open.  
 
-![alt text](http://giv-oct.uni-muenster.de:8080/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm1.png)
+![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm1.png "Empty Form")
 
 3. Fillin the form with App details
 
-![alt text](http://giv-oct.uni-muenster.de:8080/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm2.png)
+![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm2.png "Sample Form")
 
 4. Apply and you will get your API Key 
 
 
-![alt text](http://giv-oct.uni-muenster.de:8080/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm3.png "Sample API Key")
+![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm3.png "Sample API Key")
 
 
 Your key has also been sent to your email address
@@ -46,7 +46,7 @@ You can change the query for example to *Social*.
 
 As responce you will get an other data collection
 
-![alt text](http://giv-oct.uni-muenster.de:8080/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyUseKeyQuerySocialSmal.png "JSON Request Social")
+![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyUseKeyQuerySocialSmal.png "JSON Request Social")
 
 
 
