@@ -18,12 +18,12 @@
 
 3. Fillin the form with App details
 
-![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm2.png "Sample Form")
+![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKeyFigures/GetAPIKeyForm2.png "Sample Form")
 
 4. Apply and you will get your API Key 
 
 
-![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm3.png "Sample API Key")
+![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKeyFigures/GetAPIKeyForm3.png "Sample API Key")
 
 
 Your key has also been sent to your email address
@@ -39,14 +39,14 @@ You can query the databases with http://giv-oct.uni-muenster.de:8080/api/query/*
 When you enter the following get request in you browser you get the JSON responce 
 [http://giv-oct.uni-muenster.de:8080/api/query/Traffic?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfbmFtZSI6Ik1heCIsImlhdCI6MTQ3NDk4MzcwMX0.gaJOuK6yPO0s8CaMDHsYCvf0i6bnzDqLR2JO5krdBAs](http://giv-oct.uni-muenster.de:8080/api/query/Traffic?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfbmFtZSI6Ik1heCIsImlhdCI6MTQ3NDk4MzcwMX0.gaJOuK6yPO0s8CaMDHsYCvf0i6bnzDqLR2JO5krdBAs)
 
-![alt text](http://giv-oct.uni-muenster.de:8080/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyUseKey.png "JSON Request Traffic")
+![alt text](http://giv-oct.uni-muenster.de:8080/docs/tutorial/1_AppKeyFigures/GetAPIKeyUseKey.png "JSON Request Traffic")
 
 You can change the query for example to *Social*.
 [http://giv-oct.uni-muenster.de:8080/api/query/Social?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfbmFtZSI6Ik1heCIsImlhdCI6MTQ3NDk4MzcwMX0.gaJOuK6yPO0s8CaMDHsYCvf0i6bnzDqLR2JO5krdBAs](http://giv-oct.uni-muenster.de:8080/api/query/Social?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfbmFtZSI6Ik1heCIsImlhdCI6MTQ3NDk4MzcwMX0.gaJOuK6yPO0s8CaMDHsYCvf0i6bnzDqLR2JO5krdBAs)
 
 As responce you will get an other data collection
 
-![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyUseKeyQuerySocialSmal.png "JSON Request Social")
+![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKeyFigures/GetAPIKeyUseKeyQuerySocialSmal.png "JSON Request Social")
 
 
 
