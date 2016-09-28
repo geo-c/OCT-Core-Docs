@@ -9,12 +9,12 @@
 
 [http://giv-oct.uni-muenster.de:8081/](http://giv-oct.uni-muenster.de:8081/)
 
-![alt text](https://github.com/geo-c/OCT-Core-Docs/blob/master/docs/tutorial/1_AppKeyFigures/GetAPIKeyForm1.png "Main Page Apps")
+![Figure: Main Page Apps](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKeyFigures/mainPageApps.png)
 
 
 2. Select *Get an API Key*. An empty from will open.  
 
-![alt text](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm1.png "Empty Form")
+![Figure: Empty Form](https://raw.githubusercontent.com/geo-c/OCT-Core-Docs/master/docs/tutorial/1_AppKey/1_AppKeyFigures/GetAPIKeyForm1.png)
 
 3. Fillin the form with App details
 
