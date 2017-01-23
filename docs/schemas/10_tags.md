@@ -3,18 +3,18 @@ DROP TABLE IF EXISTS Tags CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Tags (
-
-    -- General
-    tag_id SERIAL PRIMARY KEY,
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-    sd_id INTEGER NOT NULL REFERENCES Sub_Datasets (sd_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    tag_name CHARACTER VARYING(255) NOT NULL
-
-);
+CREATE TABLE public.tags
+(
+  tag_id integer NOT NULL DEFAULT nextval('tags_tag_id_seq'::regclass),
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  sd_id integer NOT NULL,
+  tag_name character varying(255) NOT NULL,
+  CONSTRAINT tags_pkey PRIMARY KEY (tag_id),
+  CONSTRAINT tags_sd_id_fkey FOREIGN KEY (sd_id)
+      REFERENCES public.sub_datasets (sd_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
 
 
 -- EXAMPLE-DATA

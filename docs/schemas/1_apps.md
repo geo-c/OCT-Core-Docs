@@ -4,20 +4,19 @@ DROP TABLE IF EXISTS Logs CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Apps (
-
-    -- General
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-	app_name CHARACTER VARYING(255) NOT NULL UNIQUE,
-	app_hash CHARACTER VARYING(255) NOT NULL UNIQUE,
-	app_description CHARACTER VARYING(255),
-    email_address CHARACTER VARYING(255) NOT NULL,
-    first_name CHARACTER VARYING(255) NOT NULL,
-    last_name CHARACTER VARYING(255) NOT NULL
-);
+CREATE TABLE public.apps
+(
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  app_name character varying(255) NOT NULL,
+  app_hash character varying(255) NOT NULL,
+  app_description character varying(255),
+  email_address character varying(255) NOT NULL,
+  first_name character varying(255) NOT NULL,
+  last_name character varying(255) NOT NULL,
+  CONSTRAINT apps_app_hash_key UNIQUE (app_hash),
+  CONSTRAINT apps_app_name_key UNIQUE (app_name)
+)
 
 
 -- EXAMPLE-DATA

@@ -9,23 +9,19 @@ CREATE TYPE roles AS ENUM (
 );
 
 -- SCHEMA
-CREATE TABLE Admins (
-
-    -- General
-    username CHARACTER VARYING(255) NOT NULL UNIQUE,
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-    password CHARACTER VARYING(255) NOT NULL,
-    email_address CHARACTER VARYING(255) NOT NULL,
-    first_name CHARACTER VARYING(255) NOT NULL,
-    last_name CHARACTER VARYING(255) NOT NULL,
-    expires_on TIMESTAMP WITH TIME ZONE,
-
-    -- Role
-    role roles NOT NULL
-);
+CREATE TABLE public.admins
+(
+  username character varying(255) NOT NULL,
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  password character varying(255) NOT NULL,
+  email_address character varying(255) NOT NULL,
+  first_name character varying(255) NOT NULL,
+  last_name character varying(255) NOT NULL,
+  expires_on timestamp with time zone,
+  role roles NOT NULL,
+  CONSTRAINT admins_username_key UNIQUE (username)
+)
 
 
 -- EXAMPLE-DATA

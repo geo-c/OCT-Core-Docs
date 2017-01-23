@@ -3,13 +3,22 @@ DROP TABLE IF EXISTS Logs CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Logs (
-
-    -- Attributes
-	app_hash CHARACTER VARYING(255) NOT NULL REFERENCES Apps (app_hash) ON UPDATE CASCADE ON DELETE CASCADE,
-    timestamp TIMESTAMP WITH TIME ZONE NOT NULL,
-    category_id INTEGER NOT NULL REFERENCES categories (category_id) ON UPDATE CASCADE ON DELETE CASCADE
-);
+CREATE TABLE public.logs
+(
+  app_hash character varying(255) NOT NULL,
+  "timestamp" timestamp with time zone NOT NULL,
+  category_id integer,
+  sd_id integer,
+  CONSTRAINT logs_app_hash_fkey FOREIGN KEY (app_hash)
+      REFERENCES public.apps (app_hash) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT logs_category_id_fkey FOREIGN KEY (category_id)
+      REFERENCES public.categories (category_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT logs_sd_id_fkey FOREIGN KEY (sd_id)
+      REFERENCES public.sub_datasets (sd_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
 
 
 -- EXAMPLE-DATA

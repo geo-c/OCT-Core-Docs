@@ -3,23 +3,30 @@ DROP TABLE IF EXISTS Main_Datasets CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Main_Datasets (
-
-    -- General
-    md_id SERIAL PRIMARY KEY,
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-    ds_id INTEGER NOT NULL REFERENCES Datastores (ds_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    endpoint_id INTEGER NOT NULL REFERENCES Endpoints (endpoint_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    created_by CHARACTER VARYING(255) NOT NULL REFERENCES Admins (username) ON UPDATE CASCADE ON DELETE CASCADE,
-    md_name CHARACTER VARYING(255) NOT NULL,
-    md_description CHARACTER VARYING(255) NOT NULL,
-    publisher CHARACTER VARYING(255) NOT NULL,
-    published CHARACTER VARYING(255) NOT NULL,
-    license CHARACTER VARYING(255)
-);
+CREATE TABLE public.main_datasets
+(
+  md_id integer NOT NULL DEFAULT nextval('main_datasets_md_id_seq'::regclass),
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  ds_id integer NOT NULL,
+  endpoint_id integer NOT NULL,
+  created_by character varying(255) NOT NULL,
+  md_name character varying(255) NOT NULL,
+  md_description character varying(255) NOT NULL,
+  publisher character varying(255) NOT NULL,
+  published character varying(255) NOT NULL,
+  license character varying(255),
+  CONSTRAINT main_datasets_pkey PRIMARY KEY (md_id),
+  CONSTRAINT main_datasets_created_by_fkey FOREIGN KEY (created_by)
+      REFERENCES public.admins (username) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT main_datasets_ds_id_fkey FOREIGN KEY (ds_id)
+      REFERENCES public.datastores (ds_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT main_datasets_endpoint_id_fkey FOREIGN KEY (endpoint_id)
+      REFERENCES public.endpoints (endpoint_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
 
 
 -- EXAMPLE-DATA

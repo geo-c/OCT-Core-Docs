@@ -3,16 +3,19 @@ DROP TABLE IF EXISTS Categories_Relationships CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Categories_Relationships (
-
-    -- General
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-    md_id INTEGER NOT NULL REFERENCES Main_Datasets (md_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    category_id INTEGER NOT NULL REFERENCES Categories (category_id) ON UPDATE CASCADE ON DELETE CASCADE
-);
+CREATE TABLE public.categories_relationships
+(
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  md_id integer NOT NULL,
+  category_id integer NOT NULL,
+  CONSTRAINT categories_relationships_category_id_fkey FOREIGN KEY (category_id)
+      REFERENCES public.categories (category_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT categories_relationships_md_id_fkey FOREIGN KEY (md_id)
+      REFERENCES public.main_datasets (md_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
 
 
 -- EXAMPLE-DATA

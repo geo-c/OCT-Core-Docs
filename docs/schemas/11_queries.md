@@ -3,19 +3,21 @@ DROP TABLE IF EXISTS Queries CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Queries (
-
-    -- General
-	query_id SERIAL PRIMARY KEY,
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-    sd_id INTEGER NOT NULL REFERENCES Sub_Datasets (sd_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    query_intern CHARACTER VARYING(500),
-    query_extern CHARACTER VARYING(500),
-    query_description CHARACTER VARYING(500) NOT NULL
-);
+CREATE TABLE public.queries
+(
+  query_id integer NOT NULL DEFAULT nextval('queries_query_id_seq'::regclass),
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  sd_id integer NOT NULL,
+  query_intern text,
+  query_extern character varying(500),
+  query_description character varying(500) NOT NULL,
+  active boolean,
+  CONSTRAINT queries_pkey PRIMARY KEY (query_id),
+  CONSTRAINT queries_sd_id_fkey FOREIGN KEY (sd_id)
+      REFERENCES public.sub_datasets (sd_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
 
 -- EXAMPLE-DATA
 INSERT INTO Queries (created, updated, sd_id, query_intern, query_extern, query_description)

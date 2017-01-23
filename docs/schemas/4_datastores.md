@@ -16,24 +16,20 @@ CREATE TYPE types AS ENUM (
 
 
 -- SCHEMA
-CREATE TABLE Datastores (
-
-    -- General
-    ds_id SERIAL PRIMARY KEY,
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-    ds_description CHARACTER VARYING(255),
-    ds_host CHARACTER VARYING(255),
-    ds_port INTEGER,
-    db_instance CHARACTER VARYING(255),
-    db_user CHARACTER VARYING(255),
-    db_password CHARACTER VARYING(255),
-
-    -- Type
-    ds_type types NOT NULL
-);
+CREATE TABLE public.datastores
+(
+  ds_id integer NOT NULL DEFAULT nextval('datastores_ds_id_seq'::regclass),
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  ds_description character varying(255),
+  ds_host character varying(255),
+  ds_port integer,
+  db_instance character varying(255),
+  db_user character varying(255),
+  db_password character varying(255),
+  ds_type types NOT NULL,
+  CONSTRAINT datastores_pkey PRIMARY KEY (ds_id)
+)
 
 
 -- EXAMPLE-DATA

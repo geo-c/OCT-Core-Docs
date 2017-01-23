@@ -3,16 +3,14 @@ DROP TABLE IF EXISTS Categories CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Categories (
-
-    -- General
-    category_id SERIAL PRIMARY KEY,
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-    category_name CHARACTER VARYING(255) NOT NULL
-);
+CREATE TABLE public.categories
+(
+  category_id integer NOT NULL DEFAULT nextval('categories_category_id_seq'::regclass),
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  category_name character varying(255) NOT NULL,
+  CONSTRAINT categories_pkey PRIMARY KEY (category_id)
+)
 
 
 -- EXAMPLE-DATA

@@ -3,18 +3,19 @@ DROP TABLE IF EXISTS Sub_Datasets CASCADE;
 
 
 -- SCHEMA
-CREATE TABLE Sub_Datasets (
-
-    -- General
-	sd_id SERIAL PRIMARY KEY,
-    created TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated TIMESTAMP WITH TIME ZONE NOT NULL,
-
-    -- Attributes
-	md_id INTEGER REFERENCES Main_Datasets (md_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    sd_name CHARACTER VARYING(255) NOT NULL,
-    sd_description CHARACTER VARYING(255) NOT NULL
-);
+CREATE TABLE public.sub_datasets
+(
+  sd_id integer NOT NULL DEFAULT nextval('sub_datasets_sd_id_seq'::regclass),
+  created timestamp with time zone NOT NULL,
+  updated timestamp with time zone NOT NULL,
+  md_id integer,
+  sd_name character varying(255) NOT NULL,
+  sd_description character varying(255) NOT NULL,
+  CONSTRAINT sub_datasets_pkey PRIMARY KEY (sd_id),
+  CONSTRAINT sub_datasets_md_id_fkey FOREIGN KEY (md_id)
+      REFERENCES public.main_datasets (md_id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
 
 
 -- EXAMPLE-DATA
