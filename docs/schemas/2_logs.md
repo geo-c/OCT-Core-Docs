@@ -9,6 +9,7 @@ CREATE TABLE public.logs
   "timestamp" timestamp with time zone NOT NULL,
   category_id integer,
   sd_id integer,
+  location_id integer,
   CONSTRAINT logs_app_hash_fkey FOREIGN KEY (app_hash)
       REFERENCES public.apps (app_hash) MATCH SIMPLE
       ON UPDATE CASCADE ON DELETE CASCADE,
@@ -17,7 +18,10 @@ CREATE TABLE public.logs
       ON UPDATE CASCADE ON DELETE CASCADE,
   CONSTRAINT logs_sd_id_fkey FOREIGN KEY (sd_id)
       REFERENCES public.sub_datasets (sd_id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE CASCADE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT logs_location_id_fkey FOREIGN KEY (location_id)
+    REFERENCES public.visitors (id)
+    ON UPDATE CASCADE ON DELETE CASCADE
 )
 
 

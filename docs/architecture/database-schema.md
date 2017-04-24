@@ -5,11 +5,14 @@
 | [3](#3-admins) | [Admins](../schemas/3_admins) |
 | [4](#4-datastores) | [Datastores](../schemas/4_datastores) |
 | [5](#5-endpoints) | [Endpoints](../schemas/5_endpoints) |
-| [6](#6-main-datasets) | [Main_Datasets](../schemas/6_main_datasets) |
-| [7](#7-sub-datasets) | [Sub_Datasets](../schemas/7_sub_datasets) |
-| [8](#8-tags) | [Tags](../schemas/8_tags) |
-| [9](#9-queries) | [Queries](../schemas/9_queries) |
-| [10](#10-parameters) | [Parameters](../schemas/10_parameters) |
+| [6](#6-categories) | [Categories](../schemas/6_categories) |
+| [7](#7-categories_relationships) | [Categories_Relationships](--/schemas/7_categories_relationships) |
+| [8](#8-main-datasets) | [Main_Datasets](../schemas/8_main_datasets) |
+| [9](#9-sub-datasets) | [Sub_Datasets](../schemas/9_sub_datasets) |
+| [10](#10-tags) | [Tags](../schemas/10_tags) |
+| [11](#11-queries) | [Queries](../schemas/11_queries) |
+| [12](#12-parameters) | [Parameters](../schemas/12_parameters) |
+| [13](#13-visitors) | [Visitors](../schemas/13_visitors) |
 
 The following figure shows the database-schema:
 

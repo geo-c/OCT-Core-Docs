@@ -24,12 +24,15 @@ pages:
     - 4. Datastores: schemas/4_datastores.md
     - 5. Endpoints: schemas/5_endpoints.md
     - 6. Categories: schemas/6_categories.md
-    - 7. Main-Datasets: schemas/7_main_datasets.md
-    - 8. Categories-Relationships: schemas/8_categories_relationships.md
+    - 7. Categories-Relationships: schemas/7_categories_relationships.md
+    - 8. Main-Datasets: schemas/8_main_datasets.md
     - 9. Sub-Datasets: schemas/9_sub_datasets.md
     - 10. Tags: schemas/10_tags.md
     - 11. Queries: schemas/11_queries.md
     - 12. Parameters: schemas/12_parameters.md
+    - 13. Visitors: schemas/13_visitors.md
+- Project Structure:
+    - 1. Folder Structure: structure/folder_structure.md
 - Tutorial:
     - 1. Generate a API Key: tutorial/1_AppKey.md
     - 2. Add a Database: tutorial/2_CreateDatabase.md
