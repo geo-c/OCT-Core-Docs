@@ -89,17 +89,7 @@ The following figure shows the database-schema:
 | 14 | Economy and Employment |
 
 
-### 7. Main Datasets
-
-| md_id | ds_id | endpoint_id | created_by | md_name | md_description | publisher | published | license |
-|-------|--------------|-------------|------------|---------|----------------|-----------|-----------|---------|
-| 1 | 1 | 1 | n_schi16 | Water gauges | Datasets about a mobile water gauge sensor network | Nicholas Schiestel | July 2016 | MIT |
-| 2 | 1 | 1 | n_schi16 | Plants | Dataset about plants | Nicholas Schiestel | June 2016 | MIT |
-| 3 | 8 | 2 | n_schi16 | EnviroCar | The EnviroCar Project | Institute for Geoinformatics | 2013-01-01 | MIT |
-| 4 | 8 | 3 | t_user01 | EnviroCar | The EnviroCar Project | Institute for Geoinformatics | 2013-01-01 | MIT |
-
-
-### 8. Category_relationships
+### 7. Category_relationships
 
 | md_id | category_id |
 |-------|--------------|
@@ -111,6 +101,16 @@ The following figure shows the database-schema:
 | 3 | 12 |
 | 4 | 11 |
 | 4 | 12 |
+
+
+### 8. Main Datasets
+
+| md_id | ds_id | endpoint_id | created_by | md_name | md_description | publisher | published | license |
+|-------|--------------|-------------|------------|---------|----------------|-----------|-----------|---------|
+| 1 | 1 | 1 | n_schi16 | Water gauges | Datasets about a mobile water gauge sensor network | Nicholas Schiestel | July 2016 | MIT |
+| 2 | 1 | 1 | n_schi16 | Plants | Dataset about plants | Nicholas Schiestel | June 2016 | MIT |
+| 3 | 8 | 2 | n_schi16 | EnviroCar | The EnviroCar Project | Institute for Geoinformatics | 2013-01-01 | MIT |
+| 4 | 8 | 3 | t_user01 | EnviroCar | The EnviroCar Project | Institute for Geoinformatics | 2013-01-01 | MIT |
 
 
 ### 9. Sub Datasets
@@ -165,3 +165,6 @@ The following figure shows the database-schema:
 | parameter_id | query_id | parameter_value |
 |--------------|----------|-----------------|
 | 1 | 5 | 1 |
+
+
+### 13. Visitors

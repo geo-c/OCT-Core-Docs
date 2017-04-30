@@ -18,7 +18,6 @@ Files:
 	$ nodejs server.js --api_port <<port>> --database_name <<name>> --postgres_user <<user>> --postgres_password <<password>> --email_user <<email>> --email_password <<email_password>>
 ```
 
-### 1. Config
 
 
 
@@ -46,7 +45,6 @@ Files:
 
 
 
-### 3. models
 
 
 ### 4. public
@@ -59,8 +57,3 @@ Files:
 | [js](#4-js) | All Javascript files |
 | [lib](#5-lib) | External libraries which are used by this website |
 | [map](#6-map) | Side with a map for displaying visitors |
-
-### 5. routes
-
-
-### 6. templates

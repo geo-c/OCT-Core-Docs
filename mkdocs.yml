@@ -16,6 +16,10 @@ pages:
     - Overview: architecture/overview.md
     - Database-Schema: architecture/database-schema.md
     - REST-API: architecture/rest-api.md
+- Installation:
+    - 1. Setting up Database: installation/1_database.md
+    - 2. Installation: installation/2_installation.md
+    - 3. Usage: installation/3_usage.md
 - Database-Schemas:
     - Resetting: schemas/0_reset.md
     - 1. Apps: schemas/1_apps.md
