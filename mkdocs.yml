@@ -20,6 +20,7 @@ pages:
     - 1. Setting up Database: installation/1_database.md
     - 2. Installation: installation/2_installation.md
     - 3. Usage: installation/3_usage.md
+    - Docker: installation/docker.md
 - Database-Schemas:
     - Resetting: schemas/0_reset.md
     - 1. Apps: schemas/1_apps.md
