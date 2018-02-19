@@ -1,3 +1,12 @@
+--ENUM
+CREATE TYPE app_type AS ENUM(
+  'WebApp',
+  'MobileApp',
+  'Service',
+  'Guideline'
+);
+
+--SCHEMA
 CREATE TABLE apps
 (
   created timestamp with time zone NOT NULL,
@@ -5,6 +14,8 @@ CREATE TABLE apps
   app_name character varying(255) NOT NULL,
   app_hash character varying(255) NOT NULL,
   app_description character varying(255),
+  url character varying(255),
+  type app_type,
   email_address character varying(255) NOT NULL,
   first_name character varying(255) NOT NULL,
   last_name character varying(255) NOT NULL,
@@ -205,6 +216,17 @@ CREATE TABLE visitors
   CONSTRAINT visitors_pkey PRIMARY KEY (id)
 );
 
+--SCHEMA
+CREATE TABLE logs_count
+(
+count SERIAL NOT NULL,
+app_hash character varying(255),
+category_id integer,
+type character varying(255),
+day timestamp,
+sd_id integer
+);
+
 -- SCHEMA
 CREATE TABLE logs
 (
@@ -226,3 +248,4 @@ CREATE TABLE logs
     REFERENCES public.visitors (id)
     ON UPDATE CASCADE ON DELETE CASCADE
 );
+
