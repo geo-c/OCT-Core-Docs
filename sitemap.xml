@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/architecture/overview/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/architecture/database-schema/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/architecture/rest-api/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/installation/1_database/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/installation/2_installation/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/installation/3_usage/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/installation/docker/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/0_reset/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/1_apps/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/2_logs/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/3_admins/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/4_datastores/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/5_endpoints/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/6_categories/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/7_categories_relationships/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/8_main_datasets/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/9_sub_datasets/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/10_tags/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/11_queries/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/12_parameters/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/schemas/13_visitors/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/structure/folder_structure/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/tutorial/1_AppKey/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/tutorial/2_CreateDatabase/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/tutorial/3_AndriodApp/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/about/repositories/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://giv-oct2.uni-muenster.de:8080/docs/about/contributors/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>

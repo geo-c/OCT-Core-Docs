@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>REST-API - Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/styles.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "REST-API";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Architecture</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../database-schema/">Database-Schema</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">REST-API</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#status-codes">Status-Codes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#authentication">Authentication</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#required-data">Required Data</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Installation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/1_database/">1. Setting up Database</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/2_installation/">2. Installation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/3_usage/">3. Usage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/docker/">Docker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Database-Schemas</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/0_reset/">Resetting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/1_apps/">1. Apps</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/2_logs/">2. Logs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/3_admins/">3. Admins</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/4_datastores/">4. Datastores</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/5_endpoints/">5. Endpoints</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/6_categories/">6. Categories</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/7_categories_relationships/">7. Categories-Relationships</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/8_main_datasets/">8. Main-Datasets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/9_sub_datasets/">9. Sub-Datasets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/10_tags/">10. Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/11_queries/">11. Queries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/12_parameters/">12. Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../schemas/13_visitors/">13. Visitors</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Project Structure</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../structure/folder_structure/">1. Folder Structure</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tutorial</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorial/1_AppKey/">1. Generate a API Key</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorial/2_CreateDatabase/">2. Add a Database</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorial/3_AndriodApp/">3. Implement a Simple Andriod App</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../about/repositories/">Repositories</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../about/contributors/">Contributors</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Architecture &raquo;</li>
+        
+      
+    
+    <li>REST-API</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/geo-c/OCT-Core-Docs" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h5 id="status-codes">Status-Codes<a class="headerlink" href="#status-codes" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="green">200</span></td>
+<td>Request successful</td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td>Created</td>
+</tr>
+<tr>
+<td><span class="green">204</span></td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><span class="red">400</span></td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td><span class="red">401</span></td>
+<td>Unauthorized</td>
+</tr>
+<tr>
+<td><span class="red">403</span></td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td><span class="red">404</span></td>
+<td>Not found</td>
+</tr>
+<tr>
+<td><span class="red">500</span></td>
+<td>Internal Server Error</td>
+</tr>
+<tr>
+<td><span class="blue">501</span></td>
+<td>Not implemented</td>
+</tr>
+</tbody>
+</table>
+<h5 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PA</code></td>
+<td>Public access</td>
+</tr>
+<tr>
+<td><code>UT</code></td>
+<td>User-Access-Token needed</td>
+</tr>
+<tr>
+<td><code>AT</code></td>
+<td>Admin-Access-Token needed</td>
+</tr>
+<tr>
+<td><code>AO</code></td>
+<td>Admin only</td>
+</tr>
+</tbody>
+</table>
+<h5 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Endpoint</th>
+<th>Method</th>
+<th>Headers</th>
+<th>Query</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/signup</code></td>
+<td><strong>POST</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="blue">501</span></td>
+<td><code>/api/reset</code></td>
+<td><strong>POST</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/admin/signup</code></td>
+<td><strong>POST</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/admin/login/:username/:password</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">200</span></td>
+<td><code>/api/apps</code></td>
+<td><strong>GET</strong></td>
+<td>AT, AO</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">200</span></td>
+<td><code>/api/apps/byDate/:date</code></td>
+<td><strong>GET</strong></td>
+<td>AT, AO</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/apps/:app_hash/logs</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/apps/:app_hash/logsByCategory</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/apps/:app_hash/logsByDataset</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/categories</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/categories/:category_id/apps</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/categories/byDate/:date</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/categories/withDatasets</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/categories/withDatasets/:category_id</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/tdataset</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/tdataset/:sd_id</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/main_database</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/database_all</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/database_all/:username</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/query/:category_name</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">204</span></td>
+<td><code>/query/point/:lat/:lon/:dst</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/dataset/:query_extern</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">204</span></td>
+<td><code>/api/querycheck</code></td>
+<td><strong>POST</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/spatial/:md_id</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/sub_database/:md_name</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/submit</code></td>
+<td><strong>POST</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">201</span></td>
+<td><code>/api/update</code></td>
+<td><strong>POST</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">200</span></td>
+<td><code>/api/visitor</code></td>
+<td><strong>POST</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">200</span></td>
+<td><code>/api/visitors/:status/:value</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">200</span></td>
+<td><code>/api/visitors/:status/:value/:timeFrom</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="green">200</span></td>
+<td><code>/api/visitors/:status/:value/:timeFrom/:timeTo</code></td>
+<td><strong>GET</strong></td>
+<td>PA</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="required-data">Required Data<a class="headerlink" href="#required-data" title="Permanent link">&para;</a></h5>
+<p><span class="green">/api/signup</span></p>
+<pre><code>{
+    app_name: &quot;&quot;,
+    app_description: &quot;&quot;,
+    email:address: &quot;&quot;,
+    first_name: &quot;&quot;,
+    last_name_: &quot;&quot;
+
+}
+
+</code></pre>
+
+<p><span class="green">/api/admin/signup</span></p>
+<pre><code>{
+    username: &quot;&quot;,
+    password: &quot;&quot;,
+    first_name: &quot;&quot;,
+    last_name_: &quot;&quot;,
+    email: &quot;&quot;
+}
+
+</code></pre>
+
+<p><span class="green">/api/submit</span></p>
+<pre><code>{
+    ds_type: &quot;&quot;,
+    ds_description: &quot;&quot;,
+    ds_host: &quot;&quot;,
+    ds_port: &quot;&quot;,
+    ds_instance: &quot;&quot;,
+    db_user: &quot;&quot;,
+    db_password: &quot;&quot;,
+    created_by: &quot;&quot;,
+    md_name: &quot;&quot;,
+    md_description: &quot;&quot;,
+    publisher: &quot;&quot;,
+    published: &quot;&quot;,
+    license: &quot;&quot;,
+    sd_name: &quot;&quot;,
+    sd_description: &quot;&quot;,
+    query_intern: &quot;&quot;,
+    query_extern: &quot;&quot;,
+    query_description: &quot;&quot;,
+    categories: [&quot;&quot;]
+}
+
+</code></pre>
+
+<p><span class="green">/api/update</span></p>
+<pre><code>{
+    ds_id: &quot;&quot;,
+    ds_type: &quot;&quot;,
+    ds_description: &quot;&quot;,
+    ds_host: &quot;&quot;,
+    ds_port: &quot;&quot;,
+    ds_instance: &quot;&quot;,
+    db_user: &quot;&quot;,
+    db_password: &quot;&quot;,
+    created_by: &quot;&quot;,
+    md_id: &quot;&quot;,
+    md_name: &quot;&quot;,
+    md_description: &quot;&quot;,
+    publisher: &quot;&quot;,
+    published: &quot;&quot;,
+    license: &quot;&quot;,
+    sd_name: &quot;&quot;,
+    sd_description: &quot;&quot;,
+    query_id: &quot;&quot;,
+    active: &quot;&quot;,
+    query_intern: &quot;&quot;,
+    query_extern: &quot;&quot;,
+    query_description: &quot;&quot;,
+    categories: [&quot;&quot;]
+
+}
+
+</code></pre>
+
+<p><span class="green">/api/visitor</span></p>
+<pre><code>{
+    city: &quot;&quot;,
+    country_code: &quot;&quot;,
+    latitude: &quot;&quot;,
+    longitude: &quot;&quot;,
+    metro_code: &quot;&quot;,
+    region_code: &quot;&quot;,
+    time_zone: &quot;&quot;,
+    zip_code: &quot;&quot;
+}
+
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../installation/1_database/" class="btn btn-neutral float-right" title="1. Setting up Database"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../database-schema/" class="btn btn-neutral" title="Database-Schema"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016 <a href="https://www.uni-muenster.de/Geoinformatics/">Institute for Geoinformatics, Münster</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../database-schema/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../installation/1_database/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
