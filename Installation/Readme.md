@@ -8,4 +8,4 @@ Steps
 
 3. Download the docker image from this repository (Postgis and OCT-Core folders), the yml file, and use docker-compose up to start your instance.
 
-More information about the OCT is available [here](https://github.com/geo-c/OCT-Core).
+For a brief introduction to the OCT, check [here](https://github.com/geo-c/OCT-Core).
